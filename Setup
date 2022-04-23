@@ -24,6 +24,8 @@ mariadb
         GRANT ALL ON *.* TO 'admin'@'localhost' IDENTIFIED BY 'password' WITH GRANT OPTION;
         FLUSH PRIVILEGES;
         exit
+    mysql -u admin -p
+        CREATE DATABASE mydb;
 
 
 CREATE APP
