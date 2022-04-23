@@ -1,0 +1,30 @@
+sudo apt update && sudo apt upgrade
+
+global
+    sudo apt instal curl
+
+git
+    sudo apt install git-all
+
+node
+    curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -
+    sudo apt install nodejs
+    sudo npm install npm@latest -g
+    sudo npm install -g create-react-app
+
+mariadb
+    sudo apt -y install software-properties-common
+    # UBUNTU 20.04
+    # sudo apt-key adv --fetch-keys 'https://mariadb.org/mariadb_release_signing_key.asc'
+    # sudo add-apt-repository 'deb [arch=amd64] http://mariadb.mirror.globo.tech/repo/10.5/ubuntu focal main'
+    sudo apt install mariadb-server
+    #sudo systemctl start mariadb
+    sudo mysql_secure_installation
+    sudo mariadb
+        GRANT ALL ON *.* TO 'admin'@'localhost' IDENTIFIED BY 'password' WITH GRANT OPTION;
+        FLUSH PRIVILEGES;
+        exit
+
+
+CREATE APP
+    create-react-app
